@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+
 namespace cdCollection.Objects
 {
   public class Cd {
     private string _artist;
     private string _album;
     private int _year;
-    private static List<string> _instances = new List<string>;
+    private static List<string> _instances = new List<string> {};
+
     private string _fullDescription;
 
     public Cd(string artist, string album, int year)
@@ -29,7 +32,7 @@ namespace cdCollection.Objects
     {
       return _album;
     }
-    public void SetYear(year)
+    public void SetYear(int year)
     {
       _year = year;
     }
@@ -45,7 +48,7 @@ namespace cdCollection.Objects
     {
       return _fullDescription;
     }
-    public static List<string> GetLIst()
+    public static List<string> GetList()
     {
       return _instances;
     }

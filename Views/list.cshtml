@@ -1,7 +1,11 @@
 <h1>Albums</h1>
 <ul>
-  @foreach (string cd in)
+  @foreach (string cd in Model)
   {
     <li>@cd</li>
   }
 </ul>
+<p><a href="/">Add another album</a></p>
+<form action="/form" method="post">
+  <button type="submit" name="button">Clear Album List</button>
+</form>
