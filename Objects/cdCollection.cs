@@ -6,8 +6,8 @@ namespace cdCollection.Objects
     private string _artist;
     private string _album;
     private int _year;
-    private static List<string> _instances = new List<string> {};
-
+    private static List<string> _strings = new List<string> {};
+    private static List<Cd> _instances = new List<Cd> {};
     private string _fullDescription;
 
     public Cd(string artist, string album, int year)
@@ -50,15 +50,23 @@ namespace cdCollection.Objects
     }
     public static List<string> GetList()
     {
-      return _instances;
+      return _strings;
     }
     public void Save()
     {
-      _instances.Add(_fullDescription);
+      _strings.Add(_fullDescription);
+    }
+    public void SetInstances()
+    {
+      _instances.Add(this);
+    }
+    public static List<Cd> GetInstances()
+    {
+      return _instances;
     }
     public static void ClearAll()
     {
-      _instances.Clear();
+      _strings.Clear();
     }
   }
 }
